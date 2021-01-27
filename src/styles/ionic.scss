@@ -1,0 +1,26 @@
+// For FIX of freezing scroll in safari
+.ios ion-content {
+  pointer-events: auto;
+}
+
+ion-header {
+  background: var(--custom-background-color-white);
+}
+
+ion-toolbar .sc-ion-searchbar-ios-h {
+  padding: 0 !important;
+  height: 60px;
+}
+
+ion-toast::part(button) {
+  padding: 0px 0px 0px 10px !important;
+  height: auto !important;
+  transition: background-color 0s ease 0s, opacity 100ms linear 0s;
+  border: 0px;
+  background-color: transparent;
+  font-style: var(--custom-font-style-normal);
+  font-weight: var(--custom-font-weight-medium);
+  font-size: var(--custom-font-size-9);
+  line-height: var(--custom-line-height);
+  overflow: hidden;
+}

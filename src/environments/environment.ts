@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  desktop: true,
+  console: true,
+  language: 'ru',
+  name: 'movili',
+  url: 'http://10.110.1.71:8884',
+  imageUrl: 'http://10.110.1.71:8884/api/file'
 };
 
 /*

@@ -1,0 +1,39 @@
+html * {
+  font-family: var(--ion-font-family, ('Open Sans', sans-serif));
+  -webkit-touch-callout: none !important;
+  -khtml-user-select: none !important;;
+  -moz-user-select: none !important;; /* Firefox all */
+  -ms-user-select: none !important;; /* IE 10+ */
+  user-select: none !important; /* Likely future */
+  -webkit-user-select: none; /* Chrome all / Safari all */
+}
+
+body * {
+  font-family: var(--ion-font-family, ('Open Sans', sans-serif));
+}
+
+html, body {
+  color: var(--custom-text-color-primary, #000000);
+  line-height: var(--custom-line-height, 140%);
+  font-size: var(--custom-font-size-5, 18px);
+  font-weight: var(--custom-font-weight-regular, 400);
+  background: var(--custom-background-color-white, #FFFFFF);
+}
+
+.select-disable, * {
+  -webkit-touch-callout: none !important;
+  -khtml-user-select: none !important;;
+  -moz-user-select: none !important;; /* Firefox all */
+  -ms-user-select: none !important;; /* IE 10+ */
+  user-select: none !important; /* Likely future */
+  -webkit-user-select: none; /* Chrome all / Safari all */
+}
+
+input, textarea {
+  -webkit-user-select: text !important;
+}
+
+input::selection, textarea::selection {
+  -webkit-user-select: none !important;
+}
+

@@ -1,0 +1,65 @@
+h1 {
+  font-size: var(--custom-font-size-1);
+  font-weight: var(--custom-font-weight-semibold);
+  font-style: var(--custom-font-style-normal);
+  color: var(--custom-text-color-white);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--custom-font-size-2);
+  font-weight: var(--custom-font-weight-bold);
+  font-style: var(--custom-font-style-normal);
+  color: var(--custom-text-color-black);
+  margin: 0;
+  padding: 0;
+}
+
+
+h3 {
+
+}
+
+h4 {
+  font-size: var(--custom-font-size-4);
+  font-weight: var(--custom-font-weight-semibold);
+  font-style: var(--custom-font-style-normal);
+  color: var(--custom-text-color-movili-dark);
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: var(--custom-font-size-5);
+  font-weight: var(--custom-font-weight-semibold);
+  font-style: var(--custom-font-style-normal);
+  color: var(--custom-text-color-black);
+  margin: 0;
+  padding: 0;
+}
+
+
+p {
+  font-size: var(--custom-font-size-9);
+  font-style: var(--custom-font-style-normal);
+  font-weight: var(--custom-font-weight-regular);
+  color: var(--custom-text-color-gray);
+}
+
+label {
+  position: relative;
+  display: flex;
+  font-style: var(--custom-font-style-normal);
+  font-weight: var(--custom-font-weight-semibold);
+  font-size: var(--custom-font-size-9);
+  line-height: var(--custom-line-height);
+  color: var(--custom-text-color-gray);
+  padding-bottom: 10px;
+}
+
+a {
+  color: var(--custom-text-color-danger);
+  text-decoration: none;
+}

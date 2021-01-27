@@ -1,0 +1,70 @@
+.custom-ion-content-tab {
+}
+
+.ion-content-flex-center {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  position: fixed;
+}
+
+.tabs-modal-component {
+  align-items: baseline;
+  --height: 100%; //todo change after ion-tabs 94%
+  --backdrop-opacity: 0;
+
+  :first-of-type {
+    --backdrop-opacity: 0;
+  }
+}
+
+.select-order-status .modal-wrapper {
+  align-items: baseline;
+  --height: 90%;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.border-line {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(226, 226, 226, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ignore-inner-html {
+  p {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.wrap-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+
+.toast {
+  width: 90vw;
+}
