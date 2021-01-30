@@ -1,0 +1,56 @@
+<div class="page-padding" [class.dark-mode]="moviliHeader?.darkMode">
+  <div class="grid-header">
+    <div class="block-1">
+      <ng-container *ngIf="moviliHeader?.filter ==='start'">
+        <ion-icon src="assets/icon/filter.svg"></ion-icon>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.back">
+        <svg (click)="goBack()" width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M9.60364 16.5603C9.83832 16.8174 9.9687 17.1558 9.95566 17.5077C9.95566 17.8595 9.82528 18.1844 9.57756 18.4415C9.34288 18.6851 9.01694 18.834 8.67796 18.834C8.33897 18.834 8.01303 18.7122 7.76531 18.4686L0.385909 10.8084C0.268569 10.6866 0.177304 10.5377 0.112115 10.3753C0.0469259 10.2129 0.0078125 10.037 0.0078125 9.86105C0.0078125 9.68511 0.0469259 9.50917 0.112115 9.33323C0.177304 9.17083 0.268569 9.02195 0.385909 8.90015L7.76531 1.24C7.88265 1.11819 8.02607 1.00992 8.18252 0.942255C8.35201 0.874586 8.5215 0.833984 8.69099 0.833984C8.86048 0.833984 9.04301 0.861052 9.19947 0.928721C9.35592 0.99639 9.49934 1.10466 9.62972 1.22647C9.74706 1.34827 9.83832 1.51068 9.90351 1.67308C9.98174 1.83549 10.0078 2.01143 10.0078 2.2009C10.0078 2.37684 9.9687 2.55278 9.90351 2.71519C9.83832 2.87759 9.73402 3.02647 9.60364 3.1618L3.14992 9.86105L4.37548 11.1197L9.60364 16.5603Z"
+              fill="#181725" [class.dark-mode]="moviliHeader?.darkMode"/>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="10" height="18" fill="white" transform="translate(0.0078125 0.833984)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.exit">
+        <ion-icon src="assets/icon/exit.svg"></ion-icon>
+      </ng-container>
+    </div>
+    <div class="block-2">
+      <ng-container *ngIf="moviliHeader?.title">
+        <div class="title">
+          {{moviliHeader?.title}}
+        </div>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.logo">
+        <ion-icon class="logo-icon" src="assets/icon/logo.svg"></ion-icon>
+      </ng-container>
+    </div>
+    <div class="block-3">
+      <ng-container *ngIf="moviliHeader?.filter ==='end'">
+        <ion-icon src="assets/icon/filter.svg"></ion-icon>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.basket">
+        <ion-icon src="assets/icon/cart.svg"></ion-icon>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.chat">
+        <ion-icon (click)="goToChat()" src="assets/icon/chat.svg"></ion-icon>
+      </ng-container>
+      <ng-container *ngIf="moviliHeader?.rightTitle">
+        <div class="right-title">
+          {{moviliHeader?.rightTitle}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div *ngIf="moviliHeader?.location" class="flex-header">
+    <ion-icon class="location-icon" src="assets/icon/point.svg"></ion-icon>
+    <div class="location">{{moviliHeader?.location}}</div>
+  </div>
+</div>

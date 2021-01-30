@@ -140,7 +140,7 @@ input {
   border-radius: 15px;
   border: none;
   position: relative;
-  background-image: url("~assets/movili/search-icon.svg");
+  background-image: url("../assets/icon/search-icon.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -154,7 +154,7 @@ input {
   @include custom-input;
 
   padding-left: 24px;
-  background-image: url("../assets/icon/search.svg");
+  background-image: url("../assets/icon/search-icon.svg");
   background-repeat: no-repeat;
   background-position-x: 6px;
   background-position-y: center;
