@@ -49,7 +49,7 @@ export class AuthService {
 
     async goByMainPage() {
         const role = this.storageLocalService.getRole();
-        return this.navCtrl.navigateForward(['/tabs/home-tab/home']);
+        return this.navCtrl.navigateForward(['/tabs/home-tab']);
     }
 
     clearAllSession() {

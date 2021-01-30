@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Market } from '@ionic-native/market/ngx';
-import { PlatformService } from '@app/services/roots/platform.service';
+import {PlatformService} from '../../services/roots/platform.service';
+import {Market} from '@ionic-native/market/ngx';
 
 @Component({
   selector: 'app-version',

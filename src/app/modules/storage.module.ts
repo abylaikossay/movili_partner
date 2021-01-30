@@ -1,12 +1,12 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
-import { IonicStorageModule, StorageConfig } from '@ionic/storage';
-import { StorageSecureBrowserService } from '@app/services/storages/storage-secure-browser.service';
-import { StorageLocalService } from '@app/services/storages/storage-local.service';
-import { StorageIonicService } from '@app/services/storages/storage-ionic.service';
-import { environment } from 'environments/environment';
-import { StorageSecure } from '@app/models/abstracts/StorageSecure';
-import { throwIfAlreadyLoaded } from '@app/modules/module-import-guard';
-import { StorageLocalInstanceIdService } from '@app/services/storages/storage-local-instance-id.service';
+import {environment} from '../../environments/environment';
+import {StorageSecureBrowserService} from '../services/storages/storage-secure-browser.service';
+import {IonicStorageModule, StorageConfig} from '@ionic/storage';
+import {StorageLocalService} from '../services/storages/storage-local.service';
+import {StorageLocalInstanceIdService} from '../services/storages/storage-local-instance-id.service';
+import {StorageIonicService} from '../services/storages/storage-ionic.service';
+import {StorageSecure} from '../models/abstracts/StorageSecure';
+import {throwIfAlreadyLoaded} from './module-import-guard';
 
 
 export function secureStorageFactory(): any {

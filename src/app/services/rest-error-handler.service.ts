@@ -48,7 +48,7 @@ export class RestErrorHandlerService {
     /*
     * нужно добавлять только те методы, которые работают под капотом и не роляют никакой роли в бизнес логике
     * */
-    const methods: string[] = ['cash-management/share/total', 'cash-management/investor/etn/order/total'];
+    const methods: string[] = [];
     return methods.some((item: string) => url.includes(item));
   }
 

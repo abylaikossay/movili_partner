@@ -49,8 +49,8 @@ export class AppService {
             const style = document.createElement('style');
             style.innerHTML =
                 `input, textarea {
-      -webkit-user-select: none !important;
-      user-select: none !important;
+               -webkit-user-select: none !important;
+               user-select: none !important;
     }`;
             const ref = document.querySelector('script');
             ref.parentNode.insertBefore(style,
