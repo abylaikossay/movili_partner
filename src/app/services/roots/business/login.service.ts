@@ -40,7 +40,7 @@ export class LoginService {
         await this.authControllerService.registerTemplateUser(userTemplateRequest).toPromise()
             .then(response => {
                 this.storageLocalService.setAuthorizationPhoneNumber(userTemplateRequest.phone);
-                this.navCtrl.navigateForward(['/sms']);
+                this.navCtrl.navigateForward(['/main/sms']);
             }).catch(err => {
                 if (err.error) {
                     this.toastService.present(err.error.message);
@@ -56,7 +56,7 @@ export class LoginService {
             .then(response => {
                 console.log(response);
                 this.storageLocalService.setActivationCode(activationCode);
-                this.navCtrl.navigateForward(['/password-confirm']);
+                this.navCtrl.navigateForward(['/main/password-confirm']);
             }).catch(error => {
                 if (error.error) {
                     this.toastService.present(error.error.message);
@@ -82,7 +82,7 @@ export class LoginService {
                         this.toastService.present('Произошла ошибка, повторите позже.');
                         return;
                     });
-                await this.navCtrl.navigateForward(['/location']);
+                await this.navCtrl.navigateForward(['/main/location']);
             }).catch(err => {
                 console.log(err);
                 if (err.error) {

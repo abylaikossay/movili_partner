@@ -9,6 +9,7 @@ import {PopOverService} from './pop-over.service';
 import {ToastService} from './toast.service';
 import {IonicControllerAbstract} from '../../models/abstracts/IonicControllerAbstract';
 import {NetworkStatusComponent} from '../../components/network-status/network-status.component';
+import {LocationResponse} from '../../models/responses/LocationResponse';
 
 /*
 * Use only with Option, if you want use specific ionic controller use other service
@@ -86,7 +87,48 @@ export class SettingControllerService extends AbstractSettingController {
                 component: NetworkStatusComponent,
                 translucent: false,
                 backdropDismiss: true,
-                showBackdrop: true
+                showBackdrop: true,
+            };
+        });
+    }
+
+
+    /* ALERT
+     */
+    public setAlertChooseGender(): IonicControllerAbstract {
+        return this.setExtraOption(this.actionSheetService, (ionicController): IonicControllerOptionType => {
+            return {
+                animated: true,
+                header: 'Пол',
+                buttons: [{
+                    text: 'Мужской',
+                    handler: data => {
+                        ionicController.dismiss('Мужской');
+                    }
+                }, {
+                    text: 'Женский',
+                    handler: data => {
+                        ionicController.dismiss('Женский');
+                    }
+                }]
+            };
+        });
+    }
+
+    public setAlertSelectCity(cities: LocationResponse[]): IonicControllerAbstract {
+        return this.setExtraOption(this.actionSheetService, (ionicController): IonicControllerOptionType => {
+            const buttons = cities.map((item) => {
+                return {
+                    text: item.ruName,
+                    handler: data => {
+                        ionicController.dismiss(item);
+                    }
+                };
+            });
+            return {
+                animated: true,
+                header: 'Выберите город',
+                buttons: [...buttons]
             };
         });
     }

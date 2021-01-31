@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {LocationResolver} from './services/resolvers/location/location.resolver';
 
 const routes: Routes = [
   {
@@ -27,7 +28,10 @@ const routes: Routes = [
       },
       {
         path: 'location',
-        loadChildren: () => import('./pages/outer/main/location/location.module').then( m => m.LocationPageModule)
+        loadChildren: () => import('./pages/outer/main/location/location.module').then( m => m.LocationPageModule),
+        resolve: {
+          cityList: LocationResolver
+        }
       },
     ]
   },

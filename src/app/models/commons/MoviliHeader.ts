@@ -50,14 +50,14 @@ export class MoviliHeader {
 
 
   static PROFILE_DETAIL(): MoviliHeader {
-    return new MoviliHeader(null,
+    return new MoviliHeader('Профиль',
       true,
       null,
       null,
       null,
       null,
       null,
-      true,
+      null,
       null,
       null,
       null);
